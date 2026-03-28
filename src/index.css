@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 30 33% 92%;
+    --foreground: 20 32% 18%;
+
+    --card: 30 50% 97%;
+    --card-foreground: 20 32% 18%;
+
+    --popover: 30 50% 97%;
+    --popover-foreground: 20 32% 18%;
+
+    --primary: 22 41% 39%;
+    --primary-foreground: 30 50% 97%;
+
+    --secondary: 28 35% 82%;
+    --secondary-foreground: 20 32% 18%;
+
+    --muted: 30 25% 88%;
+    --muted-foreground: 18 16% 40%;
+
+    --accent: 24 40% 60%;
+    --accent-foreground: 30 50% 97%;
+
+    --destructive: 4 63% 46%;
+    --destructive-foreground: 30 50% 97%;
+
+    --success: 148 50% 36%;
+    --success-foreground: 0 0% 100%;
+
+    --warning: 32 75% 44%;
+    --warning-foreground: 0 0% 100%;
+
+    --info: 210 56% 41%;
+    --info-foreground: 0 0% 100%;
+
+    --border: 30 22% 81%;
+    --input: 30 22% 81%;
+    --ring: 22 41% 39%;
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+
+    --font-heading: 'Playfair Display', serif;
+    --font-body: 'Inter', sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+
+    --gradient-primary: linear-gradient(135deg, hsl(22, 41%, 39%), hsl(24, 40%, 60%));
+    --gradient-warm: linear-gradient(135deg, hsl(30, 33%, 92%), hsl(30, 50%, 97%));
+    --shadow-warm: 0 4px 20px -4px hsla(22, 41%, 39%, 0.15);
+    --shadow-warm-lg: 0 10px 40px -8px hsla(22, 41%, 39%, 0.2);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+  }
+
+  code, pre {
+    font-family: var(--font-mono);
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: hsl(var(--muted));
+  }
+  ::-webkit-scrollbar-thumb {
+    background: hsl(var(--accent));
+    border-radius: 4px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: hsl(var(--primary));
+  }
+}
+
+@layer components {
+  .glass-nav {
+    background: hsla(30, 50%, 97%, 0.92);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid hsl(var(--border));
+  }
+
+  .gradient-btn {
+    background: var(--gradient-primary);
+    color: hsl(var(--primary-foreground));
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+
+  .gradient-btn::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+      45deg,
+      transparent 30%,
+      hsla(0, 0%, 100%, 0.15) 50%,
+      transparent 70%
+    );
+    transform: translateX(-100%);
+    transition: transform 0.6s;
+  }
+
+  .gradient-btn:hover::after {
+    transform: translateX(100%);
+  }
+
+  .gradient-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-warm-lg);
+  }
+
+  .card-warm {
+    background: hsl(var(--card));
+    border: 1px solid hsl(var(--border));
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-warm);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+
+  .card-warm:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-warm-lg);
+  }
+
+  .section-container {
+    @apply max-w-6xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .code-block {
+    font-family: var(--font-mono);
+    background: hsl(20, 32%, 18%);
+    color: hsl(30, 50%, 90%);
+    border-radius: var(--radius);
+    padding: 1rem 1.25rem;
+    font-size: 0.85rem;
+    line-height: 1.6;
+    overflow-x: auto;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
