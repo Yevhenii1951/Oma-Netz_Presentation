@@ -8,12 +8,12 @@ const tabs = [
     label: "Senioren",
     emoji: "👵",
     features: [
-      { icon: PenLine, title: "Hilfegesuche erstellen", desc: "7 Kategorien wie Einkauf, Technik, Begleitung" },
-      { icon: Map, title: "Interaktive Karte", desc: "Helfer und Anfragen in der Nähe finden" },
+      { icon: PenLine, title: "Profil bearbeiten", desc: "Möglichkeit zur Bearbeitung der eigenen Profildaten" },
       { icon: MessageCircle, title: "Real-Time Chat", desc: "Direkte Kommunikation mit Helfern" },
-      { icon: Star, title: "Helfer bewerten", desc: "Bewertungssystem für Vertrauen" },
+      { icon: Star, title: "Helfer bewerten", desc: "Seniorinnen und Senioren bewerten die Helfer nach der Unterstützung" },
       { icon: Gift, title: "Punkte & Belohnungen", desc: "Gamification-System für Engagement" },
       { icon: Bot, title: "KI-Assistent", desc: "Kontextsensitive Hilfe via Groq" },
+      { icon: PenLine, title: "Anfrageformular ausfüllen", desc: "Seniorinnen und Senioren füllen ein einfaches Formular für die Hilfsanfrage aus" },
     ],
   },
   {
@@ -43,8 +43,10 @@ const tabs = [
     emoji: "🛡️",
     features: [
       { icon: ShieldCheck, title: "Helper verifizieren", desc: "Dokumentenprüfung & Freigabe" },
+      { icon: ShieldCheck, title: "Registrierung bestätigen", desc: "Bestätigt Registrierungsanfragen nach erfolgreicher Prüfung" },
+      { icon: UserCog, title: "Senioren & Helfer einsehen", desc: "Sieht alle Profil- und Anfragedaten von Senioren und Helfern" },
       { icon: TrendingUp, title: "Statistiken", desc: "Plattform-weite Metriken" },
-      { icon: Ban, title: "User verwalten", desc: "Accounts bannen oder entsperren" },
+      { icon: Ban, title: "Senioren & Helfer löschen", desc: "Kann Senioren- und Helfer-Accounts bei Bedarf entfernen" },
       { icon: Package, title: "Belohnungen", desc: "Rewards erstellen und verwalten" },
     ],
   },
