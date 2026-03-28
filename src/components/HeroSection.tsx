@@ -67,7 +67,7 @@ const HeroSection = () => (
 				transition={{ duration: 0.6, delay: 0.55 }}
 			>
 				<a
-					href='https://oma-netz-kassel.vercel.app'
+					href='https://oma-netz-final-project-valerija-yev.vercel.app/landing'
 					target='_blank'
 					rel='noopener noreferrer'
 					className='gradient-btn px-8 py-3.5 rounded-xl font-semibold text-sm tracking-wide'
