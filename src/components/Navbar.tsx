@@ -8,7 +8,7 @@ const links = [
 	{ label: 'Architektur', href: '#architecture' },
 	{ label: 'Features', href: '#features' },
 	{ label: 'API', href: '#api' },
-	{ label: 'Gamification', href: '#gamification' },
+	{ label: 'Prämien', href: '#anerkennung-praemien' },
 ]
 
 const Navbar = () => {
