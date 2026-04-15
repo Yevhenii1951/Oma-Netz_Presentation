@@ -29,11 +29,11 @@ const yesItems = [
 	'Anerkennung und Dankbarkeit',
 ]
 
-const AnerkennungPraemienSection = () => (
-	<SectionWrapper id='anerkennung-praemien' className='bg-card/50'>
-		<SectionTitle subtitle='Punkte sammeln, Meilensteine erreichen, Belohnungen einlösen'>
-			Anerkennung & Prämien
-		</SectionTitle>
+const GamificationSection = () => (
+  <SectionWrapper id="gamification" className="bg-card/50">
+    <SectionTitle subtitle="Punkte sammeln, Meilensteine erreichen, Belohnungen einlösen">
+      Prämien
+    </SectionTitle>
 
 		{/* Non-commercial warning */}
 		<motion.div
@@ -131,4 +131,4 @@ const AnerkennungPraemienSection = () => (
 	</SectionWrapper>
 )
 
-export default AnerkennungPraemienSection
+export default GamificationSection

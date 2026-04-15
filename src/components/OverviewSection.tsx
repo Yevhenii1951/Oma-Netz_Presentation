@@ -15,7 +15,7 @@ const points = [
 	{
 		icon: Shield,
 		title: 'Lösung',
-		desc: 'Community-basierte Plattform mit Anerkennung und Prämien, die Generationen verbindet',
+		desc: 'Community-basierte Plattform mit Prämien, die Generationen verbindet',
 	},
 	{
 		icon: MapPin,
@@ -26,7 +26,7 @@ const points = [
 
 const OverviewSection = () => (
 	<SectionWrapper id='overview'>
-		<SectionTitle subtitle='Oma Netz Kassel verbindet Senioren mit freiwilligen Helfern aus der Nachbarschaft – durch eine intuitive, barrierefreie Plattform mit Echtzeit-Chat, KI-Unterstützung sowie Anerkennung und Prämien.'>
+		<SectionTitle subtitle='Oma Netz Kassel verbindet Senioren mit freiwilligen Helfern aus der Nachbarschaft – durch eine intuitive, barrierefreie Plattform mit Echtzeit-Chat, KI-Unterstützung und Prämien.'>
 			Projektübersicht
 		</SectionTitle>
 

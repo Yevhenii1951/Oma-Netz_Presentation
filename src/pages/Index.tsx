@@ -17,13 +17,18 @@ const Index = () => (
 		<Navbar />
 		<HeroSection />
 		<OverviewSection />
+		<FeaturesSection />
 		<TechStackSection />
 		<ArchitectureSection />
 		<AuthSection />
+<<<<<<< HEAD
 		<FeaturesSection />
 		<AnerkennungPraemienSection />
+=======
+>>>>>>> 363ce8f (izmenila porydok vkladok)
 		<ApiSection />
 		<DatabaseSection />
+		<GamificationSection />
 		<DeploymentSection />
 		<ChallengesSection />
 		<FooterSection />

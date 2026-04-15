@@ -12,19 +12,15 @@ import {
 import SectionWrapper, { SectionTitle } from './SectionWrapper'
 
 const tables = [
-	{ icon: Users, name: 'User', fields: 'Role, HelperStatus, Location' },
-	{ icon: FileText, name: 'Request', fields: 'Category, Status, Location' },
-	{ icon: FileText, name: 'Offer', fields: 'Helper → Request' },
-	{
-		icon: MessageCircle,
-		name: 'Chat & Message',
-		fields: 'Real-Time Kommunikation',
-	},
-	{ icon: Star, name: 'Rating', fields: 'Bewertungssystem' },
-	{ icon: Gift, name: 'Reward & Redemption', fields: 'Anerkennung & Prämien' },
-	{ icon: Bell, name: 'Notification', fields: 'Push-Benachrichtigungen' },
-	{ icon: Key, name: 'Account / Session', fields: 'NextAuth Tabellen' },
-]
+  { icon: Users, name: "User", fields: "Role, HelperStatus, Location" },
+  { icon: FileText, name: "Request", fields: "Category, Status, Location" },
+  { icon: FileText, name: "Offer", fields: "Helper → Request" },
+  { icon: MessageCircle, name: "Chat & Message", fields: "Real-Time Kommunikation" },
+  { icon: Star, name: "Rating", fields: "Bewertungssystem" },
+  { icon: Gift, name: "Reward & Redemption", fields: "Prämien" },
+  { icon: Bell, name: "Notification", fields: "Push-Benachrichtigungen" },
+  { icon: Key, name: "Account / Session", fields: "NextAuth Tabellen" },
+];
 
 const relations = [
 	'User → Requests (Senior erstellt)',

@@ -20,138 +20,53 @@ import { useState } from 'react'
 import SectionWrapper, { SectionTitle } from './SectionWrapper'
 
 const tabs = [
-	{
-		label: 'Senioren',
-		emoji: '👵',
-		features: [
-			{
-				icon: PenLine,
-				title: 'Profil bearbeiten',
-				desc: 'Möglichkeit zur Bearbeitung der eigenen Profildaten',
-			},
-			{
-				icon: MessageCircle,
-				title: 'Real-Time Chat',
-				desc: 'Direkte Kommunikation mit Helfern',
-			},
-			{
-				icon: Star,
-				title: 'Helfer bewerten',
-				desc: 'Seniorinnen und Senioren bewerten die Helfer nach der Unterstützung',
-			},
-			{
-				icon: Gift,
-				title: 'Punkte & Belohnungen',
-				desc: 'System für Anerkennung und Prämien für Engagement',
-			},
-			{
-				icon: Bot,
-				title: 'KI-Assistent',
-				desc: 'Kontextsensitive Hilfe via Groq',
-			},
-			{
-				icon: PenLine,
-				title: 'Anfrageformular ausfüllen',
-				desc: 'Seniorinnen und Senioren füllen ein einfaches Formular für die Hilfsanfrage aus',
-			},
-		],
-	},
-	{
-		label: 'Helfer',
-		emoji: '🙋',
-		description:
-			'Studenten, Arbeitslose, arbeitende Freiwillige (ab 16 Jahren) – ehrenamtliche Freiwillige, keine Angestellten',
-		features: [
-			{
-				icon: ShieldCheck,
-				title: 'Admin-Verifizierung',
-				desc: 'Werden vom Administrator verifiziert',
-			},
-			{
-				icon: Search,
-				title: 'Hilfe bei Alltag',
-				desc: 'Einkäufen, Spaziergängen, Arztbesuchen',
-			},
-			{
-				icon: Target,
-				title: 'Punkte sammeln',
-				desc: 'Sammeln Punkte für jede Hilfe (KEIN GELD!)',
-			},
-			{
-				icon: Trophy,
-				title: 'Reputation aufbauen',
-				desc: 'Reputation in der Community aufbauen',
-			},
-			{
-				icon: Gift,
-				title: 'Belohnungen tauschen',
-				desc: 'Punkte gegen symbolische Belohnungen tauschen',
-			},
-			{
-				icon: Map,
-				title: 'Kartenansicht',
-				desc: 'Geo-basierte Anfragen visualisieren',
-			},
-		],
-	},
-	{
-		label: 'Angehörige',
-		emoji: '👪',
-		features: [
-			{
-				icon: UserCog,
-				title: 'Profil verwalten',
-				desc: 'Senior-Profil anlegen und pflegen',
-			},
-			{
-				icon: PenLine,
-				title: 'Anfragen erstellen',
-				desc: 'Im Namen der Senioren buchen',
-			},
-			{
-				icon: Bell,
-				title: 'Benachrichtigungen',
-				desc: 'Updates über Status & Aktivitäten',
-			},
-		],
-	},
-	{
-		label: 'Admin',
-		emoji: '🛡️',
-		features: [
-			{
-				icon: ShieldCheck,
-				title: 'Helper verifizieren',
-				desc: 'Dokumentenprüfung & Freigabe',
-			},
-			{
-				icon: ShieldCheck,
-				title: 'Registrierung bestätigen',
-				desc: 'Bestätigt Registrierungsanfragen nach erfolgreicher Prüfung',
-			},
-			{
-				icon: UserCog,
-				title: 'Senioren & Helfer einsehen',
-				desc: 'Sieht alle Profil- und Anfragedaten von Senioren und Helfern',
-			},
-			{
-				icon: TrendingUp,
-				title: 'Statistiken',
-				desc: 'Plattform-weite Metriken',
-			},
-			{
-				icon: Ban,
-				title: 'Senioren & Helfer löschen',
-				desc: 'Kann Senioren- und Helfer-Accounts bei Bedarf entfernen',
-			},
-			{
-				icon: Package,
-				title: 'Belohnungen',
-				desc: 'Rewards erstellen und verwalten',
-			},
-		],
-	},
-]
+  {
+    label: "Senioren",
+    emoji: "👵",
+    features: [
+      { icon: PenLine, title: "Profil bearbeiten", desc: "Möglichkeit zur Bearbeitung der eigenen Profildaten" },
+      { icon: MessageCircle, title: "Real-Time Chat", desc: "Direkte Kommunikation mit Helfern" },
+      { icon: Star, title: "Helfer bewerten", desc: "Seniorinnen und Senioren bewerten die Helfer nach der Unterstützung" },
+      { icon: Gift, title: "Punkte & Belohnungen", desc: "Prämien-System für Engagement" },
+      { icon: Bot, title: "KI-Assistent", desc: "Kontextsensitive Hilfe via Groq" },
+      { icon: PenLine, title: "Anfrageformular ausfüllen", desc: "Seniorinnen und Senioren füllen ein einfaches Formular für die Hilfsanfrage aus" },
+    ],
+  },
+  {
+    label: "Helfer",
+    emoji: "🙋",
+    description: "Studenten, Arbeitslose, arbeitende Freiwillige (ab 16 Jahren) – ehrenamtliche Freiwillige, keine Angestellten",
+    features: [
+      { icon: ShieldCheck, title: "Admin-Verifizierung", desc: "Werden vom Administrator verifiziert" },
+      { icon: Search, title: "Hilfe bei Alltag", desc: "Einkäufen, Spaziergängen, Arztbesuchen" },
+      { icon: Target, title: "Punkte sammeln", desc: "Sammeln Punkte für jede Hilfe (KEIN GELD!)" },
+      { icon: Trophy, title: "Reputation aufbauen", desc: "Reputation in der Community aufbauen" },
+      { icon: Gift, title: "Belohnungen tauschen", desc: "Punkte gegen symbolische Belohnungen tauschen" },
+      { icon: Map, title: "Kartenansicht", desc: "Geo-basierte Anfragen visualisieren" },
+    ],
+  },
+  {
+    label: "Angehörige",
+    emoji: "👪",
+    features: [
+      { icon: UserCog, title: "Profil verwalten", desc: "Senior-Profil anlegen und pflegen" },
+      { icon: PenLine, title: "Anfragen erstellen", desc: "Im Namen der Senioren buchen" },
+      { icon: Bell, title: "Benachrichtigungen", desc: "Updates über Status & Aktivitäten" },
+    ],
+  },
+  {
+    label: "Admin",
+    emoji: "🛡️",
+    features: [
+      { icon: ShieldCheck, title: "Helper verifizieren", desc: "Dokumentenprüfung & Freigabe" },
+      { icon: ShieldCheck, title: "Registrierung bestätigen", desc: "Bestätigt Registrierungsanfragen nach erfolgreicher Prüfung" },
+      { icon: UserCog, title: "Senioren & Helfer einsehen", desc: "Sieht alle Profil- und Anfragedaten von Senioren und Helfern" },
+      { icon: TrendingUp, title: "Statistiken", desc: "Plattform-weite Metriken" },
+      { icon: Ban, title: "Senioren & Helfer löschen", desc: "Kann Senioren- und Helfer-Accounts bei Bedarf entfernen" },
+      { icon: Package, title: "Belohnungen", desc: "Rewards erstellen und verwalten" },
+    ],
+  },
+];
 
 const FeaturesSection = () => {
 	const [active, setActive] = useState(0)
