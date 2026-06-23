@@ -21,11 +21,7 @@ const Index = () => (
 		<TechStackSection />
 		<ArchitectureSection />
 		<AuthSection />
-<<<<<<< HEAD
-		<FeaturesSection />
 		<AnerkennungPraemienSection />
-=======
->>>>>>> 363ce8f (izmenila porydok vkladok)
 		<ApiSection />
 		<DatabaseSection />
 		<GamificationSection />
