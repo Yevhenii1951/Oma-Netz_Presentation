@@ -15,7 +15,7 @@ const FooterSection = () => (
 			<p className='text-sm text-muted-foreground mb-1'>
 				Entwickelt von:{' '}
 				<span className='font-medium text-foreground'>
-					Valeriia Kovalenko &amp; Yevhenii Riabokon
+					Yevhenii Riabokon &amp Valeriia Kovalenko
 				</span>
 			</p>
 			<p className='text-sm text-muted-foreground mb-1'>

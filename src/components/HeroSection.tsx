@@ -51,7 +51,7 @@ const HeroSection = () => (
 					Entwickler:
 				</p>
 				<p className='text-lg md:text-xl text-foreground font-semibold'>
-					Valeriia Kovalenko &amp; Yevhenii Riabokon
+					Yevhenii Riabokon &amp Valeriia Kovalenko ;
 				</p>
 				<p className='text-sm text-muted-foreground leading-relaxed'>
 					Ein Studentenprojekt im Rahmen der Full-Stack-Entwicklung (DCI)
